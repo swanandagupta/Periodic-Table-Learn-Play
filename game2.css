@@ -1,0 +1,20 @@
+body{
+	background-color: #070F2B;
+}
+img {
+	width: 165px;
+	position: absolute;
+	top: 30px;
+	left: 20px;    
+}
+
+#coin{
+    width: 65px;
+    position: absolute;
+}
+
+#score{
+	
+	font-weight: bolder;
+	font-size: larger;
+}

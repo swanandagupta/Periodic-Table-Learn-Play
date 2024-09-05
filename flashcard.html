@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Flipping Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0000FF, #000000); /* Deep blue to black gradient */
+            color: #fff; /* Text color to be visible on dark background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align items to the top */
+            height: 100vh;
+            overflow: hidden; /* Prevent body scroll */
+            padding: 25px; /* Margin around the entire screen */
+            box-sizing: border-box; /* Include padding in width and height calculations */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(to right, #ADD8E6, #000000); /* Light blue to black gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            margin: 25px 0; /* 25px margin on top and bottom */
+            width: calc(100% - 50px); /* Ensure heading width respects the margin */
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); /* Increased card size with margin */
+            gap: 10px; /* 10px gap between cards */
+            padding: 25px 0; /* Padding on top and bottom for spacing */
+            width: calc(100% - 50px); /* Full width minus 25px margin on both sides */
+            margin: 0 auto; /* Center container with auto margin on left and right */
+            box-sizing: border-box; /* Include padding and border in width calculations */
+            height: calc(100vh - 50px); /* Adjust container height for the viewport */
+            overflow-y: auto; /* Allow vertical scrolling */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        .card-wrapper {
+            display: inline-block;
+            perspective: 1000px;
+        }
+
+        .card {
+            position: relative;
+            width: 190px; /* Increased card size by 20% */
+            height: 240px; /* Increased card size by 20% */
+            cursor: pointer;
+            transition: transform 0.6s ease-in-out;
+            transform-style: preserve-3d;
+            margin: 5px; /* 5px margin on each side of the card */
+        }
+
+        .card .front,
+        .card .back {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            margin: 0; /* Ensure no additional margin */
+            box-shadow: -16px -5px 11px -12px rgba(0, 0, 0, 0.65);
+        }
+
+        .card .front {
+            z-index: 2;
+            color: #333;
+            background: linear-gradient(to bottom, #FFFFFF, #D3D3D3); /* White to light grey gradient */
+            font-weight: 700;
+            font-size: 1rem; /* Adjusted font size for larger cards */
+        }
+
+        .card .back {
+            background: radial-gradient(circle, #FFFFFF 30%, #ADD8E6 100%); /* Radial gradient from white to light blue */
+            color: #333;
+            padding: 10px; /* Adjusted padding for larger cards */
+            font-size: 1rem; /* Adjusted font size for larger cards */
+        }
+
+        /* Animation classes */
+        .flip-right .card .back {
+            transform: rotateY(180deg);
+        }
+
+        .flip-right:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .flip-left .card .back {
+            transform: rotateY(-180deg);
+        }
+
+        .flip-left:hover .card {
+            transform: rotateY(-180deg);
+        }
+
+        .flip-up .card .back {
+            transform: rotateX(180deg);
+        }
+
+        .flip-up:hover .card {
+            transform: rotateX(180deg);
+        }
+
+        .flip-down .card .back {
+            transform: rotateX(-180deg);
+        }
+
+        .flip-down:hover .card {
+            transform: rotateX(-180deg);
+        }
+
+        .flip-diagonal-right .card .back {
+            transform: rotate3d(1, 1, 0, 180deg);
+        }
+
+        .flip-diagonal-right:hover .card {
+            transform: rotate3d(1, 1, 0, 180deg);
+        }
+
+        .flip-diagonal-left .card .back {
+            transform: rotate3d(1, 1, 0, -180deg);
+        }
+
+        .flip-diagonal-left:hover .card {
+            transform: rotate3d(1, 1, 0, -180deg);
+        }
+
+        .flip-inverted-diagonal-right .card .back {
+            transform: rotate3d(-1, 1, 0, 180deg);
+        }
+
+        .flip-inverted-diagonal-left:hover .card {
+            transform: rotate3d(1, -1, 0, 180deg);
+        }
+
+        .flip-inverted-diagonal-left .card .back {
+            transform: rotate3d(1, -1, 0, 180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LET'S LEARN ABOUT EACH GROUP OF THE PERIODIC TABLE</h1>
+    <div class="container">
+        <div class="card-wrapper flip-right">
+            <div class="card">
+                <div class="front">Group 1: Alkali Metals</div>
+                <div class="back">Highly reactive, especially with water. One valence electron leading to the formation of +1 ions. Softness and low density. Low melting and boiling points. Characteristic flame colors (e.g., sodium gives a yellow flame).</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-left">
+            <div class="card">
+                <div class="front">Group 2: Alkaline Earth Metals</div>
+                <div class="back">Less reactive than alkali metals but still reactive. Two valence electrons leading to the formation of +2 ions. Higher melting points than alkali metals. Harder and denser than alkali metals. React with water (less vigorously than Group 1).</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-up">
+            <div class="card">
+                <div class="front">Group 3: Scandium Group</div>
+                <div class="back">Transition metals with +3 oxidation states. Light and strong, with applications in aerospace (scandium). Yttrium is used in electronics and lasers. Lanthanum is part of the rare earth elements and is used in camera lenses and battery electrodes.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-down">
+            <div class="card">
+                <div class="front">Group 4: Titanium Group</div>
+                <div class="back">Strong, low-density metals, with high corrosion resistance. Used in aerospace, medical implants (titanium), and nuclear reactors (zirconium). Hafnium is used in control rods for nuclear reactors due to its neutron absorption properties.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-diagonal-right">
+            <div class="card">
+                <div class="front">Group 5: Vanadium Group</div>
+                <div class="back">Transition metals with multiple oxidation states, often +5. Vanadium is used in steel alloys for strength. Niobium and tantalum are used in superconductors and electronics.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-inverted-diagonal-left">
+            <div class="card">
+                <div class="front">Group 6: Chromium Group</div>
+                <div class="back">High melting points and hardness. Form oxides with varying oxidation states. Chromium adds corrosion resistance and a shiny finish in alloys (e.g., stainless steel). Molybdenum and tungsten are used in high-strength steel and industrial applications requiring high temperatures.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-inverted-diagonal-left">
+            <div class="card">
+                <div class="front">Group 7: Manganese Group</div>
+                <div class="back">Transition metals with multiple oxidation states, often +2, +4, +7. Manganese is crucial in steelmaking, adding strength and hardness. Technetium is radioactive and used in medical imaging.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-inverted-diagonal-left">
+            <div class="card">
+                <div class="front">Group 8: Iron Group</div>
+                <div class="back">Essential transition metals with common oxidation states of +2 and +3. High tensile strength and density. Iron is the most widely used metal, primarily in steel production. Osmium and ruthenium are rare and used in specialized industrial applications.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-diagonal-right">
+            <div class="card">
+                <div class="front">Group 9: Cobalt Group</div>
+                <div class="back">Transition metals with multiple oxidation states. Hard and brittle, with high melting points. Magnetic properties, especially cobalt. Used in alloys, magnets (cobalt), and as catalysts in chemical reactions.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-diagonal-right">
+            <div class="card">
+                <div class="front">Group 10: Nickel Group</div>
+                <div class="back">Transition metals with variable oxidation states, often +2 or +4. Good catalysts in industrial processes. High melting points and density. Corrosion-resistant and used in alloys (e.g., stainless steel) and coins.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-diagonal-right">
+            <div class="card">
+                <div class="front">Group 11: Coinage Metals</div>
+                <div class="back">Includes copper, silver, and gold. Known for their excellent conductivity and resistance to corrosion. Traditionally used in coins and jewelry. Silver is also used in electronics and solar panels.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-diagonal-left">
+            <div class="card">
+                <div class="front">Group 12: Zinc Group</div>
+                <div class="back">Includes zinc, cadmium, and mercury. Often used in protective coatings (zinc plating). Mercury is the only metal that is liquid at room temperature. Cadmium has uses in batteries and pigments.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-right">
+            <div class="card">
+                <div class="front">Group 13: Boron Group</div>
+                <div class="back">Includes boron, aluminum, gallium, indium, and thallium. Boron is used in glass and ceramics. Aluminum is lightweight and used in packaging, construction, and transportation. Gallium is used in electronics and solar panels.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-right">
+            <div class="card">
+                <div class="front">Group 14: Carbon Group</div>
+                <div class="back">Includes carbon, silicon, germanium, tin, and lead. Carbon is the basis of organic life. Silicon is used in electronics and solar panels. Tin and lead are used in various alloys and solders.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-left">
+            <div class="card">
+                <div class="front">Group 15: Nitrogen Group</div>
+                <div class="back">Includes nitrogen, phosphorus, arsenic, antimony, and bismuth. Nitrogen is essential for life, used in fertilizers. Phosphorus is crucial in biological molecules. Arsenic, antimony, and bismuth have various industrial uses.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-left">
+            <div class="card">
+                <div class="front">Group 16: Oxygen Group</div>
+                <div class="back">Includes oxygen, sulfur, selenium, tellurium, and polonium. Oxygen is vital for respiration. Sulfur is used in fertilizers and chemicals. Selenium and tellurium are used in electronics and solar cells.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-up">
+            <div class="card">
+                <div class="front">Group 17: Halogens</div>
+                <div class="back">Highly reactive nonmetals. Includes fluorine, chlorine, bromine, iodine, and astatine. Form salts when combined with metals. Used in disinfectants, dyes, and various industrial applications.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-up">
+            <div class="card">
+                <div class="front">Group 18: Noble Gases</div>
+                <div class="back">Includes helium, neon, argon, krypton, xenon, and radon. Inert gases with very low reactivity. Used in lighting, welding, and as inert atmospheres for chemical reactions. Helium is used in balloons and cryogenics.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-down">
+            <div class="card">
+                <div class="front">Lanthanides</div>
+                <div class="back">Rare earth elements including lanthanum, cerium, neodymium, and others. Used in magnets, phosphors, and catalysts. Have similar properties, including high magnetic susceptibility and catalytic activity.</div>
+            </div>
+        </div>
+        <div class="card-wrapper flip-down">
+            <div class="card">
+                <div class="front">Actinides</div>
+                <div class="back">Includes actinium, thorium, uranium, and others. Radioactive elements, including those used in nuclear reactors and weapons. Uranium and plutonium are used in nuclear energy and weapons.</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

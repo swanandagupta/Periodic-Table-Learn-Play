@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atom Builder Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+        background-image:url("https://cdn.vectorstock.com/i/1000v/50/77/chemistry-square-background-with-chemical-vector-25045077.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Elementium</h1>
+        <p>Learn about atomic structures</p>
+        <button id="startGame">Start Game</button>
+    </div>
+    <script>
+        document.getElementById('startGame').addEventListener('click', function() {
+            window.location.href = 'index.html'; 
+        });
+    </script>
+</body>
+</html>

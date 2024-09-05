@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementium.io</title>
+    <style>
+        body {
+            background-color: #070F2B;
+            background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWJ5cGR6ZXI2Z3J3a3BxbHQ4dzV3cXcyc3BtbHNtcjFsMGh5NDlyZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3bc8pP1rVdfgN1uoMV/giphy.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            filter: brightness(50%) contrast(150%);
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent, rgba(20, 5, 60, 0.7));
+            pointer-events: none;
+        }
+
+        .name {
+            position: absolute;
+            top: 30vh;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: drop-shadow(0 0 20px rgb(249, 249, 251))  
+                    drop-shadow(0 0 40px rgba(220, 218, 249, 0.7))  
+                    drop-shadow(0 0 80px rgba(189, 181, 250, 0.9));  
+                    
+        }
+
+        .start-button {
+            position: absolute;
+            top: 50vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .prtble {
+            position: absolute;
+            top: 70vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <img class="name" src="./image copy 3.png" height="100" alt="Elementium Logo">
+    <a href="./page2.html">
+        <img class="start-button" src="./image copy.png" height="100" alt="Start Button">
+    </a>
+    <img class="prtble" src="./imagedes.png" height="30" alt="Description">
+</body>
+</html>

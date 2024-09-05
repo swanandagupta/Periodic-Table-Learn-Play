@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <style>
+        body {
+            background-color: #061755;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            color: azure;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: #7e7cd8;
+            padding: 10px 0;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #eff1f3;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #2ba8f6;
+            width: 0%;
+        }
+
+        .content {
+            color: azure;
+            font-size: 25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: 70px; /* Adjusted for header height */
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            opacity: 0;
+            margin-bottom: 10px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #080707;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #313031;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button:hover {
+            background-color: #7e7cd8;
+        }
+
+        .button:active {
+            background-color: #4a6ed1;
+            box-shadow: 0 5px #050120;
+            transform: translateY(4px);
+        }
+
+        .container {
+            text-align: center;
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>HOW TO PLAY!</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>  
+    </div>
+    
+    <div class="content">
+        <ul id="infoList">
+            <li>-> Begin by launching the game to view the interactive periodic table.</li>
+            <li>   Click on any element from the periodic table to start the quiz associated with that element.</li>
+            <li>   Once you select an element, a quiz with questions related to that element will appear. Read each question and choose the correct answer from the provided options.</li>
+            <li>   After answering all the questions for the selected element, submit your responses to receive a score specifically for that element.</li>
+            <li>-> For noble gases you can play tiles dodging game which relates to noble gases being unreactive</li>
+            <li>   when the maximum number of electron in outer orbital is touched the game stops and you win the round</li>
+            <li>-> For La and Ac series we collect extra electons by electron collecting game until we collect the maximum number of electrons then u win the round </li>
+            <li>-> Replay the game to improve your scores, challenge yourself with different elements, and enhance your understanding of the periodic table.</li>
+            <li>-> Enjoy the process as you learn about each element and test your knowledge through interactive quizzes!</li>
+        </ul>
+    </div>
+
+    <div class="container">  
+        <form action="./index1.html">
+            <button class="button button1">PLAY</button>
+        </form>
+    </div>
+
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {myFunction()};
+        
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+        // JavaScript to show each list item one by one with fade-in effect
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('#infoList li');
+            let delay = 200; // Initial delay before starting the animation
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                }, delay + index * 200); // Increase delay for each item
+            });
+        });
+    </script>
+</body>
+</html>

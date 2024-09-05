@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #08279a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    text-align: center;
+    background-color: #8080e4;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 650px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3c3ad1;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#choices {
+    margin: 20px 0;
+}
+
+.choice {
+    display: block;
+    margin: 10px 0;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #535C91;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.choice:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+
+.choice:active {
+    background-color: #0e8dbd;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff6b6b;
+    font-size: 18px;
+}
+
+#score {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+@media (max-width: 400px) {
+    #game-container {
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+
+    .choice {
+        font-size: 16px;
+    }
+}
+#timer {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+/* General button styling */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for the Play Again button */
+#next {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#next:hover {
+    background-color: #45a049;
+}
+#restart {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#restart:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the Quit button */
+#quit {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+#quit:hover {
+    background-color: #e53935;
+}
+
+/* Centering the buttons on the page */
+#restart, #quit,#next {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Additional styling for the feedback text */
+#feedback {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/01/07/71/55/360_F_107715529_K4ZH2kc4TkoAZdA7W6fM6T8VCyR8AUgL.jpg');
+            background-color: #070F2B;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .content img {
+            display: block;
+            margin: 20px auto;
+        }
+
+        .container {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #080707;
+            background-color: #5049df;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #313031;
+        }
+
+        .button:hover {
+            background-color: hwb(214 30% 12%);
+        }
+
+        .button:active {
+            background-color: #8887d1;
+            box-shadow: 0 5px #a3bce8;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a href="./gameinfo.html">
+            <img src="./image.png" height="70" alt="Game Info">
+        </a>
+        <a href="./flashcard.html">
+            <img class="reactiongame" src="./letslearn.png" height="70" alt="Let's Learn">
+        </a>
+        <img class="atom" src="./atom1.png" height="100" alt="Atom">
+    </div>
+
+    <div class="container">  
+        <form action="./aboutus.html">
+           <button class="button button1">About us</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <link rel="stylesheet" href="style_idx.css">
+</head>
+<body>
+
+    <div class="table">
+        <!-- Hydrogen -->
+        <button class="element H" onclick="startLevel(1)">H</button>
+        <!-- Helium -->
+        <button class="element He" onclick="startLevel(2)">He</button>
+
+        <!-- Lithium to Neon -->
+        <button class="element Li" onclick="startLevel(3)">Li</button>
+        <button class="element Be" onclick="startLevel(4)">Be</button>
+        <button class="element B" onclick="startLevel(5)">B</button>
+        <button class="element C" onclick="startLevel(6)">C</button>
+        <button class="element N" onclick="startLevel(7)">N</button>
+        <button class="element O" onclick="startLevel(8)">O</button>
+        <button class="element F" onclick="startLevel(9)">F</button>
+        <button class="element Ne" onclick="startLevel(10)">Ne</button>
+
+        <!-- Sodium to Argon -->
+        <button class="element Na" onclick="startLevel(11)">Na</button>
+        <button class="element Mg" onclick="startLevel(12)">Mg</button>
+        <button class="element Al" onclick="startLevel(13)">Al</button>
+        <button class="element Si" onclick="startLevel(14)">Si</button>
+        <button class="element P" onclick="startLevel(15)">P</button>
+        <button class="element S" onclick="startLevel(16)">S</button>
+        <button class="element Cl" onclick="startLevel(17)">Cl</button>
+        <button class="element Ar" onclick="startLevel(18)">Ar</button>
+
+        <!-- Potassium to Krypton -->
+        <button class="element K" onclick="startLevel(19)">K</button>
+        <button class="element Ca" onclick="startLevel(20)">Ca</button>
+        <button class="element Sc" onclick="startLevel(21)">Sc</button>
+        <button class="element Ti" onclick="startLevel(22)">Ti</button>
+        <button class="element V" onclick="startLevel(23)">V</button>
+        <button class="element Cr" onclick="startLevel(24)">Cr</button>
+        <button class="element Mn" onclick="startLevel(25)">Mn</button>
+        <button class="element Fe" onclick="startLevel(26)">Fe</button>
+        <button class="element Co" onclick="startLevel(27)">Co</button>
+        <button class="element Ni" onclick="startLevel(28)">Ni</button>
+        <button class="element Cu" onclick="startLevel(29)">Cu</button>
+        <button class="element Zn" onclick="startLevel(30)">Zn</button>
+        <button class="element Ga" onclick="startLevel(31)">Ga</button>
+        <button class="element Ge" onclick="startLevel(32)">Ge</button>
+        <button class="element As" onclick="startLevel(33)">As</button>
+        <button class="element Se" onclick="startLevel(34)">Se</button>
+        <button class="element Br" onclick="startLevel(35)">Br</button>
+        <button class="element Kr" onclick="startLevel()">Kr</button>
+
+        <!-- Rubidium to Xenon -->
+        <button class="element Rb" onclick="startLevel()">Rb</button>
+        <button class="element Sr" onclick="startLevel()">Sr</button>
+        <button class="element Y" onclick="startLevel()">Y</button>
+        <button class="element Zr" onclick="startLevel()">Zr</button>
+        <button class="element Nb" onclick="startLevel()">Nb</button>
+        <button class="element Mo" onclick="startLevel()">Mo</button>
+        <button class="element Tc" onclick="startLevel()">Tc</button>
+        <button class="element Ru" onclick="startLevel()">Ru</button>
+        <button class="element Rh" onclick="startLevel()">Rh</button>
+        <button class="element Pd" onclick="startLevel()">Pd</button>
+        <button class="element Ag" onclick="startLevel()">Ag</button>
+        <button class="element Cd" onclick="startLevel()">Cd</button>
+        <button class="element In" onclick="startLevel()">In</button>
+        <button class="element Sn" onclick="startLevel()">Sn</button>
+        <button class="element Sb" onclick="startLevel()">Sb</button>
+        <button class="element Te" onclick="startLevel()">Te</button>
+        <button class="element I" onclick="startLevel()">I</button>
+        <button class="element Xe" onclick="startLevel()">Xe</button>
+
+        <!-- Cesium to Radon -->
+        <button class="element Cs" onclick="startLevel()">Cs</button>
+        <button class="element Ba" onclick="startLevel()">Ba</button>
+        <button class="element La lanthanide" onclick="startLevel(50)">La-Lu</button>
+        <button class="element Hf" onclick="startLevel()">Hf</button>
+        <button class="element Ta" onclick="startLevel()">Ta</button>
+        <button class="element W" onclick="startLevel()">W</button>
+        <button class="element Re" onclick="startLevel()">Re</button>
+        <button class="element Os" onclick="startLevel()">Os</button>
+        <button class="element Ir" onclick="startLevel()">Ir</button>
+        <button class="element Pt" onclick="startLevel()">Pt</button>
+        <button class="element Au" onclick="startLevel()">Au</button>
+        <button class="element Hg" onclick="startLevel()">Hg</button>
+        <button class="element Tl" onclick="startLevel()">Tl</button>
+        <button class="element Pb" onclick="startLevel()">Pb</button>
+        <button class="element Bi" onclick="startLevel()">Bi</button>
+        <button class="element Po" onclick="startLevel()">Po</button>
+        <button class="element At" onclick="startLevel()">At</button>
+        <button class="element Rn" onclick="startLevel()">Rn</button>
+
+        <!-- Francium to Oganesson -->
+        <button class="element Fr" onclick="startLevel()">Fr</button>
+        <button class="element Ra" onclick="startLevel()">Ra</button>
+        <button class="element Ac actinide" onclick="startLevel(50)">Ac-Lr</button>
+        <button class="element Rf" onclick="startLevel()">Rf</button>
+        <button class="element Db" onclick="startLevel()">Db</button>
+        <button class="element Sg" onclick="startLevel()">Sg</button>
+        <button class="element Bh" onclick="startLevel()">Bh</button>
+        <button class="element Hs" onclick="startLevel()">Hs</button>
+        <button class="element Mt" onclick="startLevel()">Mt</button>
+        <button class="element Ds" onclick="startLevel()">Ds</button>
+        <button class="element Rg" onclick="startLevel()">Rg</button>
+        <button class="element Cn" onclick="startLevel()">Cn</button>
+        <button class="element Nh" onclick="startLevel()">Nh</button>
+        <button class="element Fl" onclick="startLevel()">Fl</button>
+        <button class="element Mc" onclick="startLevel()">Mc</button>
+        <button class="element Lv" onclick="startLevel()">Lv</button>
+        <button class="element Ts" onclick="startLevel()">Ts</button>
+        <button class="element Og" onclick="startLevel()">Og</button>
+    </div>
+
+    <script >
+        function startLevel(level) {
+            if (level === 50) {
+                alert(`Starting Level ${level}`);
+                window.location.href = 'index2ec.html'; // Transition to game 2 for noble gases
+            } 
+            else if(level===2){
+                alert(`Starting Level ${level}`);
+                window.location.href = 'index3.html';
+            }
+            else {
+                alert(`Starting Level ${level}`);
+                window.location.href = 'game1.html'; // Transition to game 1 for other levels
+            }
+        }
+    </script>
+</body>
+</html>
